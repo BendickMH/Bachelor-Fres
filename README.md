@@ -1,5 +1,41 @@
 # Bachelor-Fres
 
+## Programmerings mål:
+
+### C#:
+
+Generelt:
+- Seriell kommunikasjon
+
+G-Kode Tolk:
+- Motor kontroll
+- Posisjon/Step Beregninger
+- Akselerasjons Beregninger
+- Visualisering av koden?
+
+GUI:
+- Jog (0.1,1,10)mm
+- Hjem knapp (0,0,0)xyz
+- Fil opplastning
+- Sett arbeidspunkt (start av materiale)
+
+### Arduino:
+
+Generelt:
+- Seriell kommunikasjon
+
+Motor:
+- Motta argumenter/Kommando fra C#
+- Tilbakemelding om posisjon
+- Godkjenning til mottak av neste kommando
+- Hardkode Z-Limits
+
+
+Knapper/Interrupts:
+- Limit switch
+- Nødstopp
+
+
 ## Loggføring av prosjekt:
 
 ### 31.03.2022 Midtveis Presentasjon tilbakemelding
