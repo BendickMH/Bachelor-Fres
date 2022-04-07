@@ -55,4 +55,4 @@ Frikk tipset oss også om hvordan vi kunne bruke RPI som en webserver av et slag
 
 ## Bilder
 
-![Beskrivelse](C:\Users\bendi\OneDrive\Documents\Bachelor-Fres\Bilder\IMG_1011.jpg)
+![Beskrivelse](https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg)
