@@ -1,5 +1,6 @@
 # Bachelor-Fres
 
+
 # Programmerings mål:
 
 ## C#:
@@ -36,7 +37,7 @@
 - Nødstopp
 
 
-## Loggføring av prosjekt:
+# Loggføring av prosjekt:
 
 ### 31.03.2022 Midtveis Presentasjon tilbakemelding
 Tilbakemeldinger på presentasjonen: 
