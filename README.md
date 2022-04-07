@@ -6,35 +6,35 @@
 ### C#:
 
 **Generelt:**
-- Seriell kommunikasjon
+- [] Seriell kommunikasjon
 
 **G-Kode Tolk:**
-- Motor kontroll
-- Posisjon/Step Beregninger
-- Akselerasjons Beregninger
-- Visualisering av koden?
+- [] Motor kontroll
+- [] Posisjon/Step Beregninger
+- [] Akselerasjons Beregninger
+- [] Visualisering av koden?
 
 **GUI:**
-- Jog (0.1,1,10)mm
-- Hjem knapp (0,0,0)xyz
-- Fil opplastning
-- Sett arbeidspunkt (start av materiale)
+- [] Jog (0.1,1,10)mm
+- [] Hjem knapp (0,0,0)xyz
+- [] Fil opplastning
+- [] Sett arbeidspunkt (start av materiale)
 
 ### Arduino:
 
 **Generelt:**
-- Seriell kommunikasjon
+- [] Seriell kommunikasjon
 
 **Motor:**
-- Motta argumenter/Kommando fra C#
-- Tilbakemelding om posisjon
-- Godkjenning til mottak av neste kommando
-- Hardkode Z-Limits
+- [] Motta argumenter/Kommando fra C#
+- [] Tilbakemelding om posisjon
+- [] Godkjenning til mottak av neste kommando
+- [] Hardkode Z-Limits
 
 
 **Knapper/Interrupts:**
-- Limit switch
-- Nødstopp
+- [] Limit switch
+- [] Nødstopp
 
 
 ## Loggføring av prosjekt:
