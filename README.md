@@ -64,7 +64,9 @@ Oppkobling av to motordrivere til arduino TMC 5160 bob V1.4 drivere er brukt
 
 Ferdig bygd Z-Akse
 
-![Montert CNC](https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1033.jpg=250x250)
+<img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1033.jpg" width=50% height=50%>
+
+![Montert CNC](https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1033.jpg)
 ![Montert CNC](https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1035.jpg)
 
 Ferdig montert ramme og "gantry", motorene er montert. 
