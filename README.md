@@ -1,3 +1,3 @@
 # Bachelor-Fres
 
-Loggføring av prosjekt:
+## Prosjekt Beskrivelser
