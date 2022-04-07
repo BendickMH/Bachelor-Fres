@@ -55,6 +55,7 @@ Frikk tipset oss også om hvordan vi kunne bruke RPI som en webserver av et slag
 
 ## Bilder
 
-!(https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg)
+![TMC5160 BOB V1.4](https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg)
+
 Bilde av oppkobling av to motordrivere til arduino TMC 5160 bob V1.4 drivere er brukt
 
