@@ -18,13 +18,13 @@ Det skal KUN defineres PINS
 #define STEP_SCK
 
 // X-Akse spesifikk pins
-#define X_CN
+#define X_CSN
 
 // Y-Akse spesifikk pins
-#define Y_CN
+#define Y_CSN
 
 // Z-Akse spesifikk pins
-#define Z_CN
+#define Z_CSN
 
 // Limit switcher/Interrupts
 #define X_LIMIT_MIN
