@@ -9,5 +9,6 @@ Rekkefølgen til #include xxxxx.h er viktig, og vil påvirke resultatet.
 
 */
 #include <Arduino.h>
+
 #include "config.h"
 #include "settings.h"
