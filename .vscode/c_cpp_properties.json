@@ -3,21 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/include",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/src",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/lib/settings",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/lib/main",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/lib/config",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/.pio/libdeps/uno/TMCStepper/src",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/cores/arduino",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/variants/standard",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
-                "F:/Progging/C#/BachelorFres/Bachelor-Fres/Bachelor_StepperKontroll/lib/cpu_map",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/libraries/HID/src",
-                "C:/Users/Bendick/.platformio/packages/framework-arduino-avr/libraries/Wire/src"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
