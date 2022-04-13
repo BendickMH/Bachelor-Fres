@@ -8,8 +8,6 @@ Det er fallgruver med denne metoden, men det har jeg ikke helt forstått meg på
 Rekkefølgen til #include xxxxx.h er viktig, og vil påvirke resultatet.
 
 */
-
-#include<Arduino.h>
-
+#include <Arduino.h>
 #include "config.h"
 #include "settings.h"
