@@ -4,16 +4,8 @@ Det er skrevet til bruk av bachelor prosjekt, CNC - Fres og har ellers ingen fun
 Prosjektet er veiledet av Svein Haustveit og Frikk Fossdal
 
 Dette arduino prosjektet er veldig inspirert av grbl, som er et open-source CNC program for arduino uno/mega. https://github.com/grbl/grbl
+
+Denne filen skal uploades til arduino UNO.
 */
 
-// Inkluder nødvendige bibliotek
-#include <Arduino.h>
-#include <TMCStepper.h>
-
-void setup() {
-  
-}
-
-void loop() {
-
-}
+#include "main.h"
