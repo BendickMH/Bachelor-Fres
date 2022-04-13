@@ -60,6 +60,19 @@ Vi lagde et dokument for planlegging av program. Det er et word dokument som har
 
 Vi har også begynt å lodde krets kort og gjør klart for oppkobling av CNC maskinen
 
+### 13.04.2022 Tar lærdom fra grbl
+
+Har brukt majoriteten av dagen på å sette opp arduino programmet slik at det bruker minst mulig minne. Dette er gjort ved å se på grbl sin kilde-kode og prøvd å forstå hva
+de har gjort og hvorfor. Det er en utfordring ettersom at arduino programmeres i C++, noe vi ikke har gått igjennom som kurs på skolen, men det er overkommelig med mye googling.
+
+Det har blitt lagt inn forskjellige filer på src mappen, mange (om ikke de fleste) filene inneholder mye kode fra grbl foreløpig men forhåpentligvis ikke for alltid. Dette er slik at vi kan se sammenhengen og forstå hvordan deres oppsett fungerer med arduino.
+
+Jeg har så langt lagt merke til to tydelige hindere i oppgaven så langt:
+1. Vi bruker TMC 5160 BOB Stepper drivere, som har eget bibliotek til arduino som tar mye minne om brukt, men jeg har ikke funnet en annen måte å styre dem på enn igjennom biblioteket. Dette hadde nok ikke vært et problem for en dreven C++ utvikler.
+2. grbl er ganske avansert i forhold til hva vi klarer å forstå, og kan dermed være litt utenfor våres programmerings forståelse. Det hjelper heller ikke at grbl skrives i C++ som gir en ekstra utfordring i forhold til hva og hvordan.
+
+Dette er nok overkommelige hindringer, men krever mye tid på lesing som tar tid vekk fra selve programmeringen og produkt utviklingen.
+
 ## Bilder
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>

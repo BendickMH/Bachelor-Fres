@@ -5,13 +5,18 @@
         smoothing
         akselerasjons rate osv
 
+? Virker som en bra måte å få opp nødvendige konfigurasjoner på
+
 */
 
 #ifndef config_h
 #define config_h
-#endif
 
-// Ikke implementert enda, men må inkludere samlingen av bibliotek og oppsett, feks fra grbl #include "grbl.h", hvor grbl.h inneholder rekkefølgen og alt som skal kjøres
+
+#include "main.h"
+
+// Hvilke default settings som skal lagres
+#define DEFAULT_BACHELORFRES
 
 // Seriell baud rate
 #define BAUD_RATE 115200
@@ -37,3 +42,5 @@
 
 // Z-Akse offset i forhold til verktøy
 #define TOOL_LENGTH_OFFSET_AXIS Z_AXIS
+
+#endif

@@ -4,8 +4,9 @@ Dette er brukt til mapping av pinner på arduino, til senere referanse. Vi endre
 
 Det skal KUN defineres PINS
 
+? Dette virker som en bra måte å mappe pins på.
 */
-
+// TODO: Sette pin nummer til riktig pin variabel etter kobling
 
 // Seriell port pinner
 #define SERIAL_RX USART_RX_vect
