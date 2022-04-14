@@ -73,6 +73,16 @@ Jeg har så langt lagt merke til to tydelige hindere i oppgaven så langt:
 
 Dette er nok overkommelige hindringer, men krever mye tid på lesing som tar tid vekk fra selve programmeringen og produkt utviklingen.
 
+Ellers har opplæringen av EEPROM begynt, det var et relativt ukjent konsept som nå virker essensielt for å få et fungerende bra prosjekt. Arduino UNO, som er brettet vi bruker, har 1KB med tilgjengelig EEPROM. Vi kommer til å prøve å bruke dette til å lagre instillinger for vår maskin, så det ikke trengs å skrives inn ved hver oppstart.
+
+## 14.04.2022 Problemer med drivere
+
+Vi bruker TMC 5160-BOB v1.4 som våre stepper drivere. Disse fungerer fint når man lager et rett fram program for å drive stepper motorene. Tidligere fikk vi de til å snurre fint, med diverse hastigheter, akselerasjons rater og microsteps, dette grunnet et fint bibliotek kalt TMCStepper.h som kan lastes ned fra github eller igjennom Platform.io.
+
+Problemet kommer når man skal kombinere den med andre bibliotek eller selvlagde, som vi holder på med. Vi får mange definisjons og deklarerings konflikter.
+
+En løsning kan være å skumme igjennom TMCStepper biblioteket, og forstå hvordan de driver motorene via SPI. evt bruke step/dir på driver for å unngå bruk av bibliotek.
+
 ## Bilder
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>

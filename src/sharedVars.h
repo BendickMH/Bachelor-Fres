@@ -17,7 +17,7 @@ Delte variabler og funksjoner til diverse andre kildefiler
 #define Y_AXIS 1
 #define Z_AXIS 2
 
-// CoreXY motor assignments // må sjekke opp i hva dette egentlig er, og om vi trenger det
+// CoreXY motor assignments // TODO: må sjekke opp i hva dette egentlig er, og om vi trenger det
 #ifdef COREXY
     #define A_MOTOR X_AXIS // Må være X
     #define B_MOTOR Y_AXIS // Må være Y
@@ -37,8 +37,8 @@ Delte variabler og funksjoner til diverse andre kildefiler
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 #define min(a,b) (((a) < (b)) ? (a) : (b))
 
-// Bitfielding og masking, C++ greier, må lese mer på det. mye handler om shifting av bits, sjekking av bits osv
-#define bit(n) (1<<n) // Venstre shifter bitet feks 0001 -> 0010, shifter like mye som andre operanden i dette tilfellet n ganger
+// Bitfielding og masking, C++ greier // TODO: må lese mer på det. mye handler om shifting av bits, sjekking av bits osv
+#define bit(n) (1<<n) // Venstre shifter bitet feks 0001 -> 0010, shifter like mye som andre operanden, i dette tilfellet n ganger
 #define bit_true_atomic(x,mask) {uint8_t sreg = SREG; cli(); (x) |= (mask); SREG = sreg; }
 #define bit_false_atomic(x,mask) {uint8_t sreg = SREG; cli(); (x) &= ~(mask); SREG = sreg; }
 #define bit_toggle_atomic(x,mask) {uint8_t sreg = SREG; cli(); (x) ^= (mask); SREG = sreg; }
