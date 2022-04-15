@@ -1,42 +1,5 @@
 # Bachelor-Fres
 
-
-## Programmerings mål:
-
-### C#:
-
-**Generelt:**
-- [ ] Seriell kommunikasjon
-
-**G-Kode Tolk:**
-- [ ] Motor kontroll
-- [ ] Posisjon/Step Beregninger
-- [ ] Akselerasjons Beregninger
-- [ ] Visualisering av koden?
-
-**GUI:**
-- [ ] Jog (0.1,1,10)mm
-- [ ] Hjem knapp (0,0,0)xyz
-- [ ] Fil opplastning
-- [ ] Sett arbeidspunkt (start av materiale)
-
-### Arduino:
-
-**Generelt:**
-- [ ] Seriell kommunikasjon
-
-**Motor:**
-- [ ] Motta argumenter/Kommando fra C#
-- [ ] Tilbakemelding om posisjon
-- [ ] Godkjenning til mottak av neste kommando
-- [ ] Hardkode Z-Limits
-
-
-**Knapper/Interrupts:**
-- [ ] Limit switch
-- [ ] Nødstopp
-
-
 ## Loggføring av prosjekt:
 
 ### 31.03.2022 Midtveis Presentasjon tilbakemelding
@@ -52,7 +15,14 @@ Tilbakemeldinger på presentasjonen:
 Frikk nevnte av vi burde lage en github for å ha oversikt over programmeringen.
 Han snakket også om at vi burde se over klokkehastighetene til raspberry pi og arduino og sjekke om hvilken som er best egnet til styring av motorene. Frikk mente arduinoen var best egnet, men vi burde undersøke selv.
 
-Frikk tipset oss også om hvordan vi kunne bruke RPI som en webserver av et slag, som et mellomledd mellom PC og Arduino, slik at den sender kommandoer og kommuniserer med arduino.
+Arduinoen sin klokkehastighet ligger på 16Mhz mens raspberry ligger på  1.8 Ghz.
+Fordelen med Arduino er at det er lett å koble, programmere og kommunisere seriellt. ulempen er da lagringsplass og programmerings forståelse.
+
+Raspberry pi er en kompakt mikro pc som vi kan programmere direkte inn i, men har en bratt læringskurve og kan være problematisk for oss som aldri har brukt linux, eller programmert i andre språk enn C# (dog det er mulig å programmere C# i RPI, så virker det for oss som at det ikke er like rett fram som med feks windows pc og VSCode, dette kan vi ta feil med)
+
+Et annet punkt å vurdere er lagrings kapasitet. Å programmere arduino til å kjøre G-Kode krever mye optimalisering for å bruke minst mulig minne. Etter testing bruker grbl ca. 92% av minnet til arduino, dette med mye optimalisering.
+
+Frikk tipset oss også om hvordan vi kunne bruke RaspberryPI som en webserver av et slag, som et mellomledd mellom PC og Arduino, slik at den sender kommandoer og kommuniserer med arduino.
 
 ### 11.04.2022 Programmerings planlegging og kobling av maskin
 
@@ -82,6 +52,17 @@ Vi bruker TMC 5160-BOB v1.4 som våre stepper drivere. Disse fungerer fint når 
 Problemet kommer når man skal kombinere den med andre bibliotek eller selvlagde, som vi holder på med. Vi får mange definisjons og deklarerings konflikter.
 
 En løsning kan være å skumme igjennom TMCStepper biblioteket, og forstå hvordan de driver motorene via SPI. evt bruke step/dir på driver for å unngå bruk av bibliotek.
+
+## 15.04.2022 Langfredag beskriver ikke dagen godt nok
+
+Brukt dagen på å sile igjennom grbl sin kilde kode etter inspirasjon og forståelse for å drive en CNC fres. 
+
+Det har gått litt opp for meg at SPI kanskje ikke er beste måten å gå fram på.
+Fordelen vi så med SPI er at vi får tilbakemelding fra driver om hvilken posisjon stepper motoren har. Derimot ser jeg fler ulemper: Det krever flere pins, det krever spesifikke pins, det krever eksternt bibliotek(som kanskje ikke er kompitabel) og tilbakemeldingen burde ikke ha så mye å si, ettersom det kanskje er like greit å holde styr på posisjoneringen selv.
+
+Ellers har langfredagen levd opp til navnet sitt, og har gitt meg god tid til å selvlære C++ via grbl. Dette er en tung og vanskelig prossess men hjelper godt med forståelsen på hvordan mikrokontrollere som arduino fungerer og opererer.
+
+Prosjektet ser overkommelig ut, men vi må nok få flere lange dager før innleveringsfristen kommer.
 
 ## Bilder
 

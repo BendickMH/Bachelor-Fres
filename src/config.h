@@ -64,7 +64,7 @@
 // Mest brukbart for laserkutter og 3dprinter
 #define MINIMUM_JUNCTION_SPEED 0.0 //(mm/min)
 
-// Er strengt tatt for spindel, men nødvendig for at annen kode skal fungere. kan fjernes og endres når vi kommer så langt
+// Feed rate er distanse per minutt. her blir minimum satt til 1mm per minut.
 #define MINIMUM_FEED_RATE 1.0
 
 // Antall bue iterasjoner med billig kalkulasjon før nøyaktig utregning.
@@ -76,8 +76,10 @@
 // Delay når maskinen "dweller", slik at kommandoer kan bli mottat
 #define DWELL_TIME_STEP 50 // int 1-255 ms
 
-/*
-!! ERROR SJEKKING HER !!
+/* 
+    !! ------------------ !!
+    !! ERROR SJEKKING HER !!
+    !! ------------------ !!
 */
 
 #endif

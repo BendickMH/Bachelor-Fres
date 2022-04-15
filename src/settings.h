@@ -71,12 +71,12 @@ typedef struct {
   float acceleration[N_AXIS];
   float max_travel[N_AXIS];
 
-  // Remaining Grbl settings
+  // Diverse innstillinger
   uint8_t pulse_microseconds;
   uint8_t step_invert_mask;
   uint8_t dir_invert_mask;
   uint8_t stepper_idle_lock_time; // If max value 255, steppers do not disable.
-  uint8_t status_report_mask; // Mask to indicate desired report data.
+  uint8_t status_report_mask; // Mask to indicate desired report data. // !! Ikke nødvendig for oss med rapport
   float junction_deviation;
   float arc_tolerance;
   

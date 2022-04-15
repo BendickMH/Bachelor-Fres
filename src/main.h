@@ -9,10 +9,9 @@ Rekkefølgen til #include xxxxx.h er viktig, og vil påvirke resultatet.
 
 ? Dette virker som en veldig effektiv og fin måte å kjøre programmet strukturert på.
 
-TODO: 1. Det som er kommentert ut er de filene som er hos grbl men ikke hos oss. vi burde sjekke ut alle filene og finne det som er nødvendig for oss. 
+TODO: 1. Det som er kommentert ut er de filene som er hos grbl. vi burde sjekke ut alle filene og finne det som er nødvendig for oss. 
 TODO: 2. Se NØYE over gcode, motion_control, planner, seriel, protocol, eeprom og stepper. Disse virker som de mest essentielle delene av programmet for vårt bruk.
 */
-// TODO: Må se nærmere på om hele bibliotek er nødvendig, eller om vi kan hente deler ut for å spare plass.
 #ifndef main_h
 #define main_h
 
@@ -34,22 +33,19 @@ TODO: 2. Se NØYE over gcode, motion_control, planner, seriel, protocol, eeprom 
 
 // Selvlagde nødvendige filer
 #include "config.h" // TODO: Luke ut unødvendig kode, forstå hva de gjør og hvorfor
-#include "sharedVars.h" 
+#include "sharedVars.h"
 #include "settings.h" // ? Det virker nødvendig, men bør kammes over for å finne det faktisk nødvendige for vårt system
-// #include "system.h" // TODO: Luke ut unødvendig kode, forstå hva de gjør og hvorfor
-#include "defaults.h" // TODO: Luke ut unødvendig kode, forstå hva de gjør og hvorfor
-#include "cpu_map.h" 
-// #include "coolant_control.h" // ? Vi har ikke kjøle system, unødvendig
-// #include "eeprom.h" // TODO: Greit å få på stell, arduino har 2kb EEPROM
-// #include "gcode.h"  // TODO: 
-// #include "limits.h" // TODO: 
-// #include "motion_control.h" // TODO: 
-// "planner.h" // TODO: 
-// #include "print.h" // TODO: 
-// #include "probe.h" // ? Vi burde ha probe, men tror ikke vi kommer til å komme til det punktet. Unødvendig?
-// #include "protocol.h" 
-// #include "report.h" 
-// #include "serial.h" 
-// #include "spindle_control.h" // ? Vi kan ikke kontrollere spindelen, det er bare et verktøy med AV/PÅ
-// #include "stepper.h" // ? Vi har eget stepper motor driver bibliotek, mulig vi kan bruke deler av dette
+#include "system.h" // TODO: Luke ut unødvendig kode, forstå hva de gjør og hvorfor. Dette er håndtering av system. Er nok en del her vi kan se vekk i fra, vi må bare luke ut hva
+#include "defaults.h" // Dette er en solid måte å sette grunninnstillinger til maskinen på. Vi burde se på måter vi kan endre det til å passe vårt program.
+#include "cpu_map.h" // Dette er en solid måte å sette pins på, ser ingen grunn til å gjøre endringer.
+#include "eeprom.h" // TODO: Greit å få på stell, arduino har 2kb EEPROM
+#include "gcode.h"  // TODO: Lite vi kan gjøre her, annet enn å lage vår egen g-kode/kommando linje tolker. vi kan ta deler fra deres.
+#include "limits.h" // TODO: Burde se på hvordan vi kan få dette til på egenhånd. Deres måte er optimalisert, men problematisk å forstå.
+#include "motion_control.h" // TODO: 
+#include "planner.h" // TODO: IKKE SETT PÅ
+#include "print.h" // TODO: IKKE SETT PÅ
+#include "protocol.h" // TODO: IKKE SETT PÅ
+#include "report.h" // TODO: IKKE SETT PÅ
+#include "serial.h" // TODO: IKKE SETT PÅ
+#include "stepper.h" // TODO: IKKE SETT PÅ. VI BURDE NOK VURDERE STEP/DIR
 #endif
