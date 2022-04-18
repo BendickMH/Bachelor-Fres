@@ -61,7 +61,7 @@
 
 
 // !! REN KOPIERING MEN NØDVENDIG FOR ANNET BRUK, MÅ SE VIDERE PÅ HVA SOM FAKTISK FOREGÅR !!
-// TODO: Se mer på dette, hva er nødvendig og hva er ikke?
+// TODO: Se mer på dette, hva er nødvendig og hva er ikke
 
 typedef struct {
 

@@ -20,6 +20,7 @@ static void report_util_feedback_line_feed() { serial_write(']'); report_util_li
 static void report_util_gcode_modes_G() { printPgmString(PSTR(" G")); }
 static void report_util_gcode_modes_M() { printPgmString(PSTR(" M")); }
 // static void report_util_comment_line_feed() { serial_write(')'); report_util_line_feed(); }
+
 static void report_util_axis_values(float *axis_value) {
   uint8_t idx;
   for (idx=0; idx<N_AXIS; idx++) {
@@ -27,53 +28,6 @@ static void report_util_axis_values(float *axis_value) {
     if (idx < (N_AXIS-1)) { serial_write(','); }
   }
 }
-
-/*
-static void report_util_setting_string(uint8_t n) {
-  serial_write(' ');
-  serial_write('(');
-  switch(n) {
-    case 0: printPgmString(PSTR("stp pulse")); break;
-    case 1: printPgmString(PSTR("idl delay")); break; 
-    case 2: printPgmString(PSTR("stp inv")); break;
-    case 3: printPgmString(PSTR("dir inv")); break;
-    case 4: printPgmString(PSTR("stp en inv")); break;
-    case 5: printPgmString(PSTR("lim inv")); break;
-    case 6: printPgmString(PSTR("prb inv")); break;
-    case 10: printPgmString(PSTR("rpt")); break;
-    case 11: printPgmString(PSTR("jnc dev")); break;
-    case 12: printPgmString(PSTR("arc tol")); break;
-    case 13: printPgmString(PSTR("rpt inch")); break;
-    case 20: printPgmString(PSTR("sft lim")); break;
-    case 21: printPgmString(PSTR("hrd lim")); break;
-    case 22: printPgmString(PSTR("hm cyc")); break;
-    case 23: printPgmString(PSTR("hm dir inv")); break;
-    case 24: printPgmString(PSTR("hm feed")); break;
-    case 25: printPgmString(PSTR("hm seek")); break;
-    case 26: printPgmString(PSTR("hm delay")); break;
-    case 27: printPgmString(PSTR("hm pulloff")); break;
-    case 30: printPgmString(PSTR("rpm max")); break;
-    case 31: printPgmString(PSTR("rpm min")); break;
-    case 32: printPgmString(PSTR("laser")); break;
-    default:
-      n -= AXIS_SETTINGS_START_VAL;
-      uint8_t idx = 0;
-      while (n >= AXIS_SETTINGS_INCREMENT) {
-        n -= AXIS_SETTINGS_INCREMENT;
-        idx++;
-      }
-      serial_write(n+'x');
-      switch (idx) {
-        case 0: printPgmString(PSTR(":stp/mm")); break;
-        case 1: printPgmString(PSTR(":mm/min")); break;
-        case 2: printPgmString(PSTR(":mm/s^2")); break;
-        case 3: printPgmString(PSTR(":mm max")); break;
-      }
-      break;
-  }
-  report_util_comment_line_feed();
-}
-*/
 
 static void report_util_uint8_setting(uint8_t n, int val) { 
   report_util_setting_prefix(n); 
@@ -150,12 +104,6 @@ void report_feedback_message(uint8_t message_code)
 }
 
 
-// Welcome message
-void report_init_message()
-{
-  printPgmString(PSTR("\r\nGrbl " GRBL_VERSION " ['$' for help]\r\n"));
-}
-
 // Grbl help message
 void report_grbl_help() {
   printPgmString(PSTR("[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]\r\n"));    
@@ -185,8 +133,6 @@ void report_grbl_settings() {
   report_util_float_setting(25,settings.homing_seek_rate,N_DECIMAL_SETTINGVALUE);
   report_util_uint8_setting(26,settings.homing_debounce_delay);
   report_util_float_setting(27,settings.homing_pulloff,N_DECIMAL_SETTINGVALUE);
-  report_util_float_setting(30,settings.rpm_max,N_DECIMAL_RPMVALUE);
-  report_util_float_setting(31,settings.rpm_min,N_DECIMAL_RPMVALUE);
   #ifdef VARIABLE_SPINDLE
     report_util_uint8_setting(32,bit_istrue(settings.flags,BITFLAG_LASER_MODE));
   #else
@@ -207,23 +153,6 @@ void report_grbl_settings() {
     val += AXIS_SETTINGS_INCREMENT;
   }
 }
-
-
-// Prints current probe parameters. Upon a probe command, these parameters are updated upon a
-// successful probe or upon a failed probe with the G38.3 without errors command (if supported).
-// These values are retained until Grbl is power-cycled, whereby they will be re-zeroed.
-void report_probe_parameters()
-{
-  // Report in terms of machine position.
-  printPgmString(PSTR("[PRB:"));
-  float print_position[N_AXIS];
-  system_convert_array_steps_to_mpos(print_position,sys_probe_position);
-  report_util_axis_values(print_position);
-  serial_write(':');
-  print_uint8_base10(sys.probe_succeeded);
-  report_util_feedback_line_feed();
-}
-
 
 // Prints Grbl NGC parameters (coordinate offsets, probing)
 void report_ngc_parameters()
@@ -348,88 +277,6 @@ void report_execute_startup_message(char *line, uint8_t status_code)
   printString(line);
   serial_write(':');
   report_status_message(status_code);
-}
-
-// Prints build info line
-void report_build_info(char *line)
-{
-  printPgmString(PSTR("[VER:" GRBL_VERSION "." GRBL_VERSION_BUILD ":"));
-  printString(line);
-  report_util_feedback_line_feed();
-  printPgmString(PSTR("[OPT:")); // Generate compile-time build option list
-  #ifdef VARIABLE_SPINDLE
-    serial_write('V');
-  #endif
-  #ifdef USE_LINE_NUMBERS
-    serial_write('N');
-  #endif
-  #ifdef ENABLE_M7
-    serial_write('M');
-  #endif
-  #ifdef COREXY
-    serial_write('C');
-  #endif
-  #ifdef PARKING_ENABLE
-    serial_write('P');
-  #endif
-  #ifdef HOMING_FORCE_SET_ORIGIN
-    serial_write('Z');
-  #endif
-  #ifdef HOMING_SINGLE_AXIS_COMMANDS
-    serial_write('H');
-  #endif
-  #ifdef LIMITS_TWO_SWITCHES_ON_AXES
-    serial_write('T');
-  #endif
-  #ifdef ALLOW_FEED_OVERRIDE_DURING_PROBE_CYCLES
-    serial_write('A');
-  #endif
-  #ifdef USE_SPINDLE_DIR_AS_ENABLE_PIN
-    serial_write('D');
-  #endif
-  #ifdef SPINDLE_ENABLE_OFF_WITH_ZERO_SPEED
-    serial_write('0');
-  #endif
-  #ifdef ENABLE_SOFTWARE_DEBOUNCE
-    serial_write('S');
-  #endif
-  #ifdef ENABLE_PARKING_OVERRIDE_CONTROL
-    serial_write('R');
-  #endif
-  #ifndef HOMING_INIT_LOCK
-    serial_write('L');
-  #endif
-  #ifdef ENABLE_SAFETY_DOOR_INPUT_PIN
-    serial_write('+');
-  #endif  
-  #ifndef ENABLE_RESTORE_EEPROM_WIPE_ALL // NOTE: Shown when disabled.
-    serial_write('*');
-  #endif
-  #ifndef ENABLE_RESTORE_EEPROM_DEFAULT_SETTINGS // NOTE: Shown when disabled.
-    serial_write('$');
-  #endif
-  #ifndef ENABLE_RESTORE_EEPROM_CLEAR_PARAMETERS // NOTE: Shown when disabled.
-    serial_write('#');
-  #endif
-  #ifndef ENABLE_BUILD_INFO_WRITE_COMMAND // NOTE: Shown when disabled.
-    serial_write('I');
-  #endif
-  #ifndef FORCE_BUFFER_SYNC_DURING_EEPROM_WRITE // NOTE: Shown when disabled.
-    serial_write('E');
-  #endif
-  #ifndef FORCE_BUFFER_SYNC_DURING_WCO_CHANGE // NOTE: Shown when disabled.
-    serial_write('W');
-  #endif
-  #ifdef ENABLE_DUAL_AXIS
-    serial_write('2');
-  #endif
-  // NOTE: Compiled values, like override increments/max/min values, may be added at some point later.
-  serial_write(',');
-  print_uint8_base10(BLOCK_BUFFER_SIZE-1);
-  serial_write(',');
-  print_uint8_base10(RX_BUFFER_SIZE);
-
-  report_util_feedback_line_feed();
 }
 
 

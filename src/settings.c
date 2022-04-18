@@ -249,7 +249,7 @@ void settings_init() {
 }
 
 
-// !! Usikker på hva disse gjør ellers i koden, men 
+// !! Usikker på hva disse gjør ellers i koden
 
 // Returns step pin mask according to Grbl internal axis indexing.
 uint8_t get_step_pin_mask(uint8_t axis_idx)
