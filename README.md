@@ -1,8 +1,7 @@
-# Bachelor-Fres
+# Bachelor-Fres - Logg
 
-## Loggføring av prosjekt:
 
-### 31.03.2022 Midtveis Presentasjon tilbakemelding
+## 31.03.2022 Midtveis Presentasjon tilbakemelding
 
 Tilbakemeldinger på presentasjonen: 
 - Passe på dato og bunntekst.
@@ -10,7 +9,7 @@ Tilbakemeldinger på presentasjonen:
 - Kanskje en video eller gif? 
 
 
-### 07.04.2022 Samtale med frikk
+## 07.04.2022 Samtale med frikk
 
 Frikk nevnte av vi burde lage en github for å ha oversikt over programmeringen.
 Han snakket også om at vi burde se over klokkehastighetene til raspberry pi og arduino og sjekke om hvilken som er best egnet til styring av motorene. Frikk mente arduinoen var best egnet, men vi burde undersøke selv.
@@ -24,13 +23,13 @@ Et annet punkt å vurdere er lagrings kapasitet. Å programmere arduino til å k
 
 Frikk tipset oss også om hvordan vi kunne bruke RaspberryPI som en webserver av et slag, som et mellomledd mellom PC og Arduino, slik at den sender kommandoer og kommuniserer med arduino.
 
-### 11.04.2022 Programmerings planlegging og kobling av maskin
+## 11.04.2022 Programmerings planlegging og kobling av maskin
 
 Vi lagde et dokument for planlegging av program. Det er et word dokument som har lister med planlagte program deler og nødvendig innhold. Dokumentet er et "levende" dokument som oppdateres flittig.
 
 Vi har også begynt å lodde krets kort og gjør klart for oppkobling av CNC maskinen
 
-### 13.04.2022 Tar lærdom fra grbl
+## 13.04.2022 Tar lærdom fra grbl
 
 Har brukt majoriteten av dagen på å sette opp arduino programmet slik at det bruker minst mulig minne. Dette er gjort ved å se på grbl sin kilde-kode og prøvd å forstå hva
 de har gjort og hvorfor. Det er en utfordring ettersom at arduino programmeres i C++, noe vi ikke har gått igjennom som kurs på skolen, men det er overkommelig med mye googling.
