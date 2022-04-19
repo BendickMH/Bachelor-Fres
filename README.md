@@ -63,6 +63,12 @@ Ellers har langfredagen levd opp til navnet sitt, og har gitt meg god tid til å
 
 Prosjektet ser overkommelig ut, men vi må nok få flere lange dager før innleveringsfristen kommer.
 
+## 19.04.2022 Kobling av maskinen
+
+Vi har montert ledning lokkene til motorene, festet koblingspunktene og koblet opp kablene til motorene og limit switchene. Det har vært litt problematisk å feste motorlokkene etterson skuehullene ikke var store nok, samt vi hadde ikke riktige skruer, men det så mye bedre ut med dem på uansett. Vi måtte også bore hull for feste av ledningene til motorlokkene så stresspunktet ikke lå på koblingspunktet.
+
+Vi har også loddet mye av kretskortet og begynner å få koblet sammen alt slik at det skal fungere med SPI. På den fronten har vi bestemt oss for å kjøpe en arduino mega slik at vi får mer lagringsplass på arduinoen, på den måten slipper vi å bekymre oss for mye over å programmere super optimalt, og kan heller ha større fokus på funksjonalitet. Vi får med det også større mulighet til å bruke SPI og limitswitcher siden flere pinner blir da tilgjengelig for oss.
+
 ## Bilder
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>
