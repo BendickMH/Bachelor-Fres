@@ -69,6 +69,18 @@ Vi har montert ledning lokkene til motorene, festet koblingspunktene og koblet o
 
 Vi har også loddet mye av kretskortet og begynner å få koblet sammen alt slik at det skal fungere med SPI. På den fronten har vi bestemt oss for å kjøpe en arduino mega slik at vi får mer lagringsplass på arduinoen, på den måten slipper vi å bekymre oss for mye over å programmere super optimalt, og kan heller ha større fokus på funksjonalitet. Vi får med det også større mulighet til å bruke SPI og limitswitcher siden flere pinner blir da tilgjengelig for oss.
 
+## 20.04.2022 Kobling av maskin part 2
+
+Loddet ferdig koblings/krets kortet:
+Mens Kim og Bendick var i elektriske maskiner timer loddet erik sammen kretskortet med driverene.
+
+Koblet sammen maskinen, krets kortet, strømforsyning og arduino:
+Vi koblet sammen kretskortet til motorene og strømforsyning og laget ett kjapt test program på arduino. Vi fikk litt problemer med at noen av komblingene til motorene var feil, og måtte da se over de. Til slutt fikk vi bevegelse i Y aksen.
+
+Testet X,Y og Z:
+
+Vi testet deretter X og Z og så at Z beveget seg fint mens X hadde problemer, og har sannsynligvis da blitt feilkoblet.
+
 ## Bilder
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>
