@@ -38,7 +38,7 @@ TODO: 2. Se NØYE over gcode, motion_control, planner, seriel, protocol, eeprom 
 #include "system.h" // TODO: Luke ut unødvendig kode, forstå hva de gjør og hvorfor. Dette er håndtering av system. Er nok en del her vi kan se vekk i fra, vi må bare luke ut hva
 #include "defaults.h" // Dette er en solid måte å sette grunninnstillinger til maskinen på. Vi burde se på måter vi kan endre det til å passe vårt program.
 #include "cpu_map.h" // Dette er en solid måte å sette pins på, ser ingen grunn til å gjøre endringer.
-#include "eeprom.h" // TODO: Greit å få på stell, arduino har 2kb EEPROM
+#include "eeprom.h" // TODO: Greit å få på stell, arduino har 1kB EEPROM
 #include "gcode.h"  // TODO: Lite vi kan gjøre her, annet enn å lage vår egen g-kode/kommando linje tolker. vi kan ta deler fra deres.
 #include "limits.h" // TODO: Burde se på hvordan vi kan få dette til på egenhånd. Deres måte er optimalisert, men problematisk å forstå.
 #include "motion_control.h" // TODO: 

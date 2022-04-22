@@ -81,6 +81,11 @@ Testet X,Y og Z:
 
 Vi testet deretter X og Z og så at Z beveget seg fint mens X hadde problemer, og har sannsynligvis da blitt feilkoblet.
 
+## 21.04.2022
+
+Test forslag av Endre, probe testing med metall plate for å teste repetisjon og nøyaktighet
+
+
 ## Bilder
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>
