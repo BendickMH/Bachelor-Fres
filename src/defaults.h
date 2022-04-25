@@ -2,7 +2,7 @@
 
 #ifndef defaults_h
 
-#ifdef DEFAULTS_BACHELORFRES
+#ifdef DEFAULT_BACHELORFRES
     #include "defaults_bachelorfres.h"
 #endif
 

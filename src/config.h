@@ -76,6 +76,12 @@
 // Delay når maskinen "dweller", slik at kommandoer kan bli mottat
 #define DWELL_TIME_STEP 50 // int 1-255 ms
 
+/*
+    !! EGENDEFINERTE MM PER STEP HER
+    #define MM_P_STEP_XY 0.28574f
+    #define MM_P_STEP_Z 0.22222f
+*/
+
 /* 
     !! ------------------ !!
     !! ERROR SJEKKING HER !!

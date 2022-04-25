@@ -80,10 +80,28 @@ Vi koblet sammen kretskortet til motorene og strømforsyning og laget ett kjapt 
 Testet X,Y og Z:
 
 Vi testet deretter X og Z og så at Z beveget seg fint mens X hadde problemer, og har sannsynligvis da blitt feilkoblet.
+Vi testet arduino mega og dens egenskaper og lagringsplass.
 
 ## 21.04.2022
 
 Test forslag av Endre, probe testing med metall plate for å teste repetisjon og nøyaktighet
+
+Ferdig lodding og testing av aksene
+
+Plate på maskin, Lars, treverksted, niter osv
+
+planlegging av styreboksen
+
+testing av arduino mega og programmering av enkel akse test og hastighet
+
+## 22.04.2022
+
+Programmering av CPU_MAP
+
+Anskaffelse av niter og festing av de
+
+Testing av koblinger
+
 
 
 ## Bilder

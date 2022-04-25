@@ -4,7 +4,6 @@ Dette er brukt til mapping av pinner på arduino, til senere referanse. Vi endre
 
 Det skal KUN defineres PINS
 
-? Dette virker som en bra måte å mappe pins på.
 */
 // TODO: Sette pin nummer til riktig pin variabel etter kobling
 
@@ -12,63 +11,32 @@ Det skal KUN defineres PINS
 #define SERIAL_RX USART_RX_vect
 #define USART_UDRE_vect
 
-// !! DETTE ER OM VI  PRØVER SPI, MEN DA MÅ VI FINNE EN LUDDIG MÅTE Å PROGGE DET PÅ !!
-// Delte motor pinner
-#define STEP_EN
-#define STEP_MOSI
-#define STEP_MISO
-#define STEP_SCK
-// X-Akse spesifikk pins
-#define X_CSN
-// Y-Akse spesifikk pins
-#define Y_CSN
-// Z-Akse spesifikk pins
-#define Z_CSN
+// SPI Spesifikke pins og masker
+#define SPI_DDR DDRB
+#define SPI_COM_PORT PORTB
+#define STEP_EN_BIT 2 // Digital: 2
+#define STEP_MOSI_BIT 5 // Digital: 11
+#define STEP_MISO_BIT 6 // Digital: 12
+#define STEP_SCK_BIT 7 // Digital: 13
+#define SPI_MASK ((1<<STEP_EN_BIT)|(1<<STEP_MOSI_BIT)|(1<<STEP_MISO_BIT)|(1<<STEP_SCK_BIT))
 
-
-//    !! BURDE STERKT VURDERE STEP/DIR !!
-// Define step pulse output pins. NOTE: All step bit pins must be on the same port.
-#define STEP_DDR        DDRD
-#define STEP_PORT       PORTD
-#define X_STEP_BIT      2  // Uno Digital Pin 2 er anbefalt
-#define Y_STEP_BIT      3  // Uno Digital Pin 3 er anbefalt
-#define Z_STEP_BIT      4  // Uno Digital Pin 4 er anbefalt
-#define STEP_MASK       ((1<<X_STEP_BIT)|(1<<Y_STEP_BIT)|(1<<Z_STEP_BIT)) // All step bits
-
-// Define step direction output pins. NOTE: All direction pins must be on the same port.
-#define DIRECTION_DDR     DDRD
-#define DIRECTION_PORT    PORTD
-#define X_DIRECTION_BIT   5  // Uno Digital Pin 5
-#define Y_DIRECTION_BIT   6  // Uno Digital Pin 6
-#define Z_DIRECTION_BIT   7  // Uno Digital Pin 7
-#define DIRECTION_MASK    ((1<<X_DIRECTION_BIT)|(1<<Y_DIRECTION_BIT)|(1<<Z_DIRECTION_BIT)) // All direction bits
-
-// Define stepper driver enable/disable output pin.
-#define STEPPERS_DISABLE_DDR    DDRB
-#define STEPPERS_DISABLE_PORT   PORTB
-#define STEPPERS_DISABLE_BIT    0  // Uno Digital Pin 8
-#define STEPPERS_DISABLE_MASK   (1<<STEPPERS_DISABLE_BIT)
+// Chip select pins og chip select maske
+#define SPI_CSN_PORT PORTH
+#define X_CSN_BIT 6 // Digital: 9
+#define Y_CSN_BIT 5 // Digital: 8
+#define Z_CSN_BIT 4 // Digital: 7
+#define CSN_MASK  ((1<<X_CSN_BIT)|(1<<Y_CSN_BIT)|(1<<Z_CSN_BIT))
 
 // Define homing/hard limit switch input pins and limit interrupt vectors. 
 // NOTE: All limit bit pins must be on the same port, but not on a port with other input pins (CONTROL).
-#define LIMIT_DDR        DDRB
-#define LIMIT_PIN        PINB
-#define LIMIT_PORT       PORTB
-#define X_LIMIT_BIT      1  // Uno Digital Pin 9
-#define Y_LIMIT_BIT      2  // Uno Digital Pin 10
-#ifdef VARIABLE_SPINDLE // Z Limit pin and spindle enabled swapped to access hardware PWM on Pin 11.  
-  #define Z_LIMIT_BIT	   4 // Uno Digital Pin 12
-#else
-  #define Z_LIMIT_BIT    3  // Uno Digital Pin 11
-#endif
-#define LIMIT_MASK       ((1<<X_LIMIT_BIT)|(1<<Y_LIMIT_BIT)|(1<<Z_LIMIT_BIT)) // All limit bits
-#define LIMIT_INT        PCIE0  // Pin change interrupt enable pin
-#define LIMIT_INT_vect   PCINT0_vect 
-#define LIMIT_PCMSK      PCMSK0 // Pin change interrupt register
-
-// Limit switcher/Interrupts
-#define X_LIMIT_MIN
-#define Y_LIMIT_MIN
-
-#define X_LIMIT_MAX
-#define Y_LIMIT_MAX
+#define LIMIT_DDR        DDRD
+#define LIMIT_PIN        PIND
+#define LIMIT_PORT       PORTD
+#define X_LIMIT_MAX_BIT   //Com: 21
+#define X_LIMIT_MIN_BIT  // Com: 20
+#define Y_LIMIT_MAX_BIT  // Com: 19
+#define Y_LIMIT_MIN_BIT  // Com: 18
+#define LIMIT_MASK       ((1<<X_LIMIT_MAX_BIT)|(1<<X_LIMIT_MIN_BIT)|(1<<Y_LIMIT_MAX_BIT)|(1<<Y_LIMIT_MIN_BIT)) // All limit bits
+#define LIMIT_INT        PCIE0  // Pin change interrupt enable pin // ? Vet ikke hva er
+#define LIMIT_INT_vect   PCINT0_vect // noe her // ? vet ikke hva er
+#define LIMIT_PCMSK      PCMSK0 // Pin change interrupt register // ? Vet ikke hva er
