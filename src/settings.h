@@ -1,7 +1,8 @@
 /* 
-  !! Settings.c og settings.c er noen av de "bibliotekene" vi burde se mer på og justere til vårt behov. mulig vi ikke trenger noe av det.
+  !! Settings.c og settings.c er noen av de bibliotekene vi burde se mer på og justere til vårt behov. mulig vi ikke trenger noe av det.
   !! Er også mulig vi kan hardkode inn det vi vil for settings, ettersom dette er en maskin med spesifikt bruk og instillinger og trenger ikke å være mottakelig for
   !! andre settings.
+
 */
 
 #ifndef settings_h
@@ -118,16 +119,5 @@ void settings_write_coord_data(uint8_t coord_select, float *coord_data);
 
 // Leser valgt koordinat data fra EEPROM
 uint8_t settings_read_coord_data(uint8_t coord_select, float *coord_data);
-
-// !! HER ER STEP/DIR OPPSETT, MULIG VI MÅ GÅ OVER TIL DEN LØSNINGEN OM SPI IKKE FUNGERER SOM DET SKAL !!
-// Returns the step pin mask according to Grbl's internal axis numbering
-uint8_t get_step_pin_mask(uint8_t i);
-
-// Returns the direction pin mask according to Grbl's internal axis numbering
-uint8_t get_direction_pin_mask(uint8_t i);
-// !!
-
-// Returnerer limit pin masken iforhold til satt fra akse nummerering tidligere
-uint8_t get_limit_pin_mask(uint8_t i);
 
 #endif

@@ -100,7 +100,17 @@ Programmering av CPU_MAP
 
 Anskaffelse av niter og festing av de
 
+ferdig kobling av maskin, kort og nødstopp
+
 Testing av koblinger
+
+## 25.04.2022
+
+Forsøkt programmering av motor kontroll, ender med konflikter i program.
+
+Problemer med TMC Stepper bibliotek og integrasjon.
+
+Lite forståelse av C++ og da treg programmering
 
 
 

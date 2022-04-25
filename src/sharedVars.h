@@ -27,9 +27,7 @@ Delte variabler og funksjoner til diverse andre kildefiler
 #define MM_PER_INCH (25.40)
 #define INCH_PER_MM (0.0393701)
 #define TICKS_PER_MICROSECOND (F_CPU/1000000)
-// Egen laget, kanskje behjelpelig i andre sammenhenger
-#define MM_PER_STEP ()
-#define MM_PER_MICROSTEP ()
+
 
 // Makroer
 #define clear_vector(a) memset(a, 0, sizeof(a))
@@ -37,7 +35,7 @@ Delte variabler og funksjoner til diverse andre kildefiler
 #define max(a,b) (((a) > (b)) ? (a) : (b))
 #define min(a,b) (((a) < (b)) ? (a) : (b))
 
-// Bitfielding og masking, C++ greier // TODO: må lese mer på det. mye handler om shifting av bits, sjekking av bits osv
+// Bitfielding og masking, C++ greier // TODO: må lese mer på det. mye handler om shifting av bits, sjekking av bits osv. HVOR BRUKES DETTE?!
 #define bit(n) (1<<n) // Venstre shifter bitet feks 0001 -> 0010, shifter like mye som andre operanden, i dette tilfellet n ganger
 #define bit_true_atomic(x,mask) {uint8_t sreg = SREG; cli(); (x) |= (mask); SREG = sreg; }
 #define bit_false_atomic(x,mask) {uint8_t sreg = SREG; cli(); (x) &= ~(mask); SREG = sreg; }

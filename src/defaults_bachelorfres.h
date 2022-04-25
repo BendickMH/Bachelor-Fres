@@ -6,18 +6,28 @@
 
     // TODO: Se etter instillinger i forhold til listen
 
-  #define DEFAULT_X_STEPS_PER_MM 26.670
-  #define DEFAULT_Y_STEPS_PER_MM 26.670
-  #define DEFAULT_Z_STEPS_PER_MM 50
+  // TODO: Dobbelt sjekke og teste om dette er korrekt
+  #define DEFAULT_X_STEPS_PER_MM 3.4996 // Full steps per MM
+  #define DEFAULT_Y_STEPS_PER_MM 3.4996 // Full steps per MM
+  #define DEFAULT_Z_STEPS_PER_MM 4.5000 // Full steps per MM
+
+  #define DEFAULT_STEP_PER_REVOLUTION 200 // Tilsvarer 1.8 grader rotasjon
+  #define DEFAULT_MICROSTEP 256 // Ett mikrostep tilsvarer 0.00703125 grader rotasjon som igjen tilsvarer 0.0011161989941708 mm per mikrostep (I XY RETNING)
+
   #define DEFAULT_X_MAX_RATE 500.0 // mm/min
   #define DEFAULT_Y_MAX_RATE 500.0 // mm/min
   #define DEFAULT_Z_MAX_RATE 500.0 // mm/min
+
+  // TODO: Finne ut hvordan dette sammenligner med TMCStepper Akselerasjon
   #define DEFAULT_X_ACCELERATION (10.0*60*60) // 10*60*60 mm/min^2 = 10 mm/sec^2
   #define DEFAULT_Y_ACCELERATION (10.0*60*60) // 10*60*60 mm/min^2 = 10 mm/sec^2
   #define DEFAULT_Z_ACCELERATION (10.0*60*60) // 10*60*60 mm/min^2 = 10 mm/sec^2
+
+ // TODO: Må legge inn riktige mål!
   #define DEFAULT_X_MAX_TRAVEL 500.0 // mm
   #define DEFAULT_Y_MAX_TRAVEL 750.0 // mm
   #define DEFAULT_Z_MAX_TRAVEL 80.0 // mm
+
   #define DEFAULT_STEP_PULSE_MICROSECONDS 10
   #define DEFAULT_STEPPING_INVERT_MASK 0
   #define DEFAULT_DIRECTION_INVERT_MASK 0
@@ -32,7 +42,7 @@
   #define DEFAULT_HARD_LIMIT_ENABLE 0  // false
   #define DEFAULT_HOMING_ENABLE 0  // false
   #define DEFAULT_HOMING_DIR_MASK 0 // move positive dir
-  #define DEFAULT_HOMING_FEED_RATE 25.0 // mm/min // Kanskje ikke nødvendig
+  #define DEFAULT_HOMING_FEED_RATE 25.0 // mm/min
   #define DEFAULT_HOMING_SEEK_RATE 500.0 // mm/min
   #define DEFAULT_HOMING_DEBOUNCE_DELAY 250 // msec (0-65k)
   #define DEFAULT_HOMING_PULLOFF 1.0 // mm
