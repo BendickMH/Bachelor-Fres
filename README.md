@@ -102,6 +102,12 @@ Anskaffelse av niter og festing av de
 
 Testing av koblinger
 
+## 05.05.22     
+
+Fikk bevegelse i alle aksene med de nye driverne DRV8825, men ikke helt problemfritt. Vi oppdaget høyfrekvente lyder og "stallgriding". Skrapende lyder som indikerer for lite dreiemoment. Vi gikk over fra en PSU til to som kan levere opp til 30V, hvor vi har to motorer på hver. Fått kjeft igjen av Endre for treboksen, så bør skaffe oss en i plast eller metall. Vi hadde et møte med Frikk der vi fikk to DRV8825 og nyttige tips om fortsettelsen på oppgaven, som: Demo mode, høyere logikk system.
+
+Dyrere drivere har såpass høy frekvens at vi ikke ville hørt de, men DRV8825 kjører på lavere frekvens som kan høres av mennesker. Billige drivere bråker mer, mindre spenningståleranse og krever mer kjøling. Disse er valgt med tanke på budsjett. Bør ta enda flere bilder og videoer!!
+
 
 
 ## Bilder
@@ -118,4 +124,6 @@ Ferdig bygd Z-Akse
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1035.jpg" width=50% height=50%>
 
 Ferdig montert ramme og "gantry", motorene er montert. 
+
+ 
 
