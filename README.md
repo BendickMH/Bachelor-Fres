@@ -117,6 +117,10 @@ Fått fikset plastboksen så endre blir fornøyd!! Koblet opp alt permanent, og 
 Starter dagen med å bytte om på koblingen til Z og Y aksen og fant ut at problemet ligger på Y aksen sin kobling. Sendte mail til Frikk for å få tips på hva dette jævelskapet kan være. DET ER JO SELVFØLGELIG CURRENT LIMITEN!! Vi har tatt utgangspunkt i Z-aksen som referansepunkt ettersom den går veldig bra. Vi endte på 1,05V-1.15V og har stilt alle inn på det. Nå går den finere enn noen gang og tegner endelig hele logoen vi har teste med uten å tegne ting oppå hverandre. 
 Nå skal vi få limitswitchene opp å gå det blir vel noe jævelskap med de også. Kommer snart tilbake med resultate. Ikke vent i spenning!
 
+# Fortsettelse 13.05.22
+
+Fikk også limitswitchene opp å gå etter litt trøbbel her også. Brukte en ekstern 5V spenningskilde, men det funket ikke. Arduinoen klarte ikke å detektere spenningsfallet på switchene, så vi droppet spenningskilden og hentet spenning rett fra arduinoen og de funket. Etter dette gikk resten av dagen på å teste litt forskjellige motiver. De som er på bilde under og noen litt mer avanserte som kommer bilde og video av lenger nede. Som vist på test 5 at Y aksen måtte kalibreres ettersom at den tegnet utenfor arket. Dette ble rettet opp og test nr.6 syntes vi ser veldig bra ut! 
+
 
 
 ## Bilder
