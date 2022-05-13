@@ -117,7 +117,7 @@ Fått fikset plastboksen så endre blir fornøyd!! Koblet opp alt permanent, og 
 Starter dagen med å bytte om på koblingen til Z og Y aksen og fant ut at problemet ligger på Y aksen sin kobling. Sendte mail til Frikk for å få tips på hva dette jævelskapet kan være. DET ER JO SELVFØLGELIG CURRENT LIMITEN!! Vi har tatt utgangspunkt i Z-aksen som referansepunkt ettersom den går veldig bra. Vi endte på 1,05V-1.15V og har stilt alle inn på det. Nå går den finere enn noen gang og tegner endelig hele logoen vi har teste med uten å tegne ting oppå hverandre. 
 Nå skal vi få limitswitchene opp å gå det blir vel noe jævelskap med de også. Kommer snart tilbake med resultate. Ikke vent i spenning!
 
-# Fortsettelse 13.05.22
+### Fortsettelse 13.05.22
 
 Fikk også limitswitchene opp å gå etter litt trøbbel her også. Brukte en ekstern 5V spenningskilde, men det funket ikke. Arduinoen klarte ikke å detektere spenningsfallet på switchene, så vi droppet spenningskilden og hentet spenning rett fra arduinoen og de funket. Etter dette gikk resten av dagen på å teste litt forskjellige motiver. De som er på bilde under og noen litt mer avanserte som kommer bilde og video av lenger nede. Som vist på test 5 at Y aksen måtte kalibreres ettersom at den tegnet utenfor arket. Dette ble rettet opp og test nr.6 syntes vi ser veldig bra ut! 
 
@@ -137,11 +137,15 @@ Ferdig bygd Z-Akse
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1035.jpg" width=50% height=50%>
 
 Ferdig montert ramme og "gantry", motorene er montert. 
-
+Test 1-4 Logo.
 <img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279728807_954451605243568_1355811422471876527_n.jpg" width=50% height=50%>
 <img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279296945_1425440631291535_5160818057353762292_n.jpg" width=50% height=50%>
 <img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279242542_666167861086248_2556704246501396964_n.jpg" width=50% height=50%>
 <img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279218236_686944822364502_1902900006388356436_n.jpg" width=50% height=50%>
+
+Test 5-  Navn, firkant, sirkel og test nr.
+<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/280502743_741153460351839_3622160828386684238_n.jpg" width=50% height=50%>
+
 
 Forskjellige tester
  
