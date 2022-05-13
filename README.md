@@ -134,5 +134,8 @@ Ferdig bygd Z-Akse
 
 Ferdig montert ramme og "gantry", motorene er montert. 
 
+<img src= https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1035.jpg" width=50% height=50%>" width=50% height=50%>
+
+Forskjellige tester
  
 
