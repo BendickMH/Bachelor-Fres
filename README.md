@@ -108,6 +108,15 @@ Fikk bevegelse i alle aksene med de nye driverne DRV8825, men ikke helt problemf
 
 Dyrere drivere har såpass høy frekvens at vi ikke ville hørt de, men DRV8825 kjører på lavere frekvens som kan høres av mennesker. Billige drivere bråker mer, mindre spenningståleranse og krever mer kjøling. Disse er valgt med tanke på budsjett. Bør ta enda flere bilder og videoer!!
 
+## 11.05.22 og 12.05.22 
+
+Fått fikset plastboksen så endre blir fornøyd!! Koblet opp alt permanent, og tester de forskjellige aksene. Z-Aksen er bra, Y-Aksen er helt forferdelig. Den Hakker hele tiden og klarer ikke gjøre bevegelsen i en hel fin bevegelse (Se Video). X-Aksen virker som de går litt forskjellig tempo. Her har vi endret oppsette fra tidliger og kjører nå ett driverkort til hver steppermotor og ikke at motorene på X-aksen deler driverkort. Denne hakker også mer enn tidligere. Vi har prøvd med enda en PSU, men ikke noe endret seg. Byttet Z og Y aksen for å se om det er driverkortet eller koblingen på koblingsbrettet til driverkortet. Dette må feilsøkes på i morgen!!!
+
+## 13.05.22
+
+Starter dagen med å bytte om på koblingen til Z og Y aksen og fant ut at problemet ligger på Y aksen sin kobling. Sendte mail til Frikk for å få tips på hva dette jævelskapet kan være. DET ER JO SELVFØLGELIG CURRENT LIMITEN!! Vi har tatt utgangspunkt i Z-aksen som referansepunkt ettersom den går veldig bra. Vi endte på 1,05V-1.15V og har stilt alle inn på det. Nå går den finere enn noen gang og tegner endelig hele logoen vi har teste med uten å tegne ting oppå hverandre. 
+Nå skal vi få limitswitchene opp å gå det blir vel noe jævelskap med de også. Kommer snart tilbake med resultate. Ikke vent i spenning!
+
 
 
 ## Bilder
