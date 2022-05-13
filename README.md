@@ -125,11 +125,11 @@ Fikk også limitswitchene opp å gå etter litt trøbbel her også. Brukte en ek
 
 ## Bilder
 
-Ferdig bygd Z-Akse
+Oppkobling av to motordrivere til arduino TMC 5160 bob V1.4 drivere er brukt
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>
 
-Oppkobling av to motordrivere til arduino TMC 5160 bob V1.4 drivere er brukt
+Ferdig bygd Z-Akse 
 
 <img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1030.jpg" width=50% height=50%>
 
