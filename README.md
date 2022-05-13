@@ -134,7 +134,10 @@ Ferdig bygd Z-Akse
 
 Ferdig montert ramme og "gantry", motorene er montert. 
 
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279728807_954451605243568_1355811422471876527_n.jpg" width=50% height=50%>" width=50% height=50%>
+<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279728807_954451605243568_1355811422471876527_n.jpg" width=50% height=50%>
+<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279296945_1425440631291535_5160818057353762292_n.jpg" width=50% height=50%>
+<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279242542_666167861086248_2556704246501396964_n.jpg" width=50% height=50%>
+<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279218236_686944822364502_1902900006388356436_n.jpg" width=50% height=50%>
 
 Forskjellige tester
  
