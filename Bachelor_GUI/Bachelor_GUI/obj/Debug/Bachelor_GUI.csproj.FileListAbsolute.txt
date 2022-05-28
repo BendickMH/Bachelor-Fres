@@ -1,0 +1,10 @@
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.exe.config
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.exe
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.pdb
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csprojAssemblyReference.cache
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.MachineControl.resources
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.Properties.Resources.resources
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.GenerateResource.cache
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.CoreCompileInputs.cache
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.exe
+F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.pdb
