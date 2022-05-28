@@ -120,37 +120,3 @@ Nå skal vi få limitswitchene opp å gå det blir vel noe jævelskap med de ogs
 ### Fortsettelse 13.05.22
 
 Fikk også limitswitchene opp å gå etter litt trøbbel her også. Brukte en ekstern 5V spenningskilde, men det funket ikke. Arduinoen klarte ikke å detektere spenningsfallet på switchene, så vi droppet spenningskilden og hentet spenning rett fra arduinoen og de funket. Etter dette gikk resten av dagen på å teste litt forskjellige motiver. De som er på bilde under og noen litt mer avanserte som kommer bilde og video av lenger nede. Som vist på test 5 at Y aksen måtte kalibreres ettersom at den tegnet utenfor arket. Dette ble rettet opp og test nr.6 syntes vi ser veldig bra ut! 
-
-
-
-## Bilder
-
-Oppkobling av to motordrivere til arduino TMC 5160 bob V1.4 drivere er brukt
-
-<img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1011.jpg" width=50% height=50%>
-
-Ferdig bygd Z-Akse 
-
-<img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1030.jpg" width=50% height=50%>
-
-Ferdig montert ramme og "gantry", motorene er montert.
-
-<img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1033.jpg" width=50% height=50%>
-<img src="https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/IMG_1035.jpg" width=50% height=50%>
-
- 
-Test 1-4 Logo.
-
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279728807_954451605243568_1355811422471876527_n.jpg" width=50% height=50%>
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279296945_1425440631291535_5160818057353762292_n.jpg" width=50% height=50%>
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279242542_666167861086248_2556704246501396964_n.jpg" width=50% height=50%>
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/279218236_686944822364502_1902900006388356436_n.jpg" width=50% height=50%>
-
-Test 5-  Navn, firkant, sirkel og test nr.
-
-<img src= "https://github.com/BendickMH/Bachelor-Fres/blob/main/Bilder/280502743_741153460351839_3622160828386684238_n.jpg" width=50% height=50%>
-
-
-Forskjellige tester
- 
-
