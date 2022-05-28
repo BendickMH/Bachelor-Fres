@@ -66,7 +66,7 @@ namespace Bachelor_GUI
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.ZeroBtn = new System.Windows.Forms.Button();
             this.homeBtn = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.unlockBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.xPosTextBox = new System.Windows.Forms.TextBox();
@@ -329,6 +329,7 @@ namespace Bachelor_GUI
             this.JogXPBtn.TabIndex = 5;
             this.JogXPBtn.Text = "X+";
             this.JogXPBtn.UseVisualStyleBackColor = false;
+            this.JogXPBtn.Click += new System.EventHandler(this.JogXPBtn_Click);
             // 
             // JogXNBtn
             // 
@@ -339,6 +340,7 @@ namespace Bachelor_GUI
             this.JogXNBtn.TabIndex = 4;
             this.JogXNBtn.Text = "X-";
             this.JogXNBtn.UseVisualStyleBackColor = false;
+            this.JogXNBtn.Click += new System.EventHandler(this.JogXNBtn_Click);
             // 
             // JogYNBtn
             // 
@@ -349,6 +351,7 @@ namespace Bachelor_GUI
             this.JogYNBtn.TabIndex = 3;
             this.JogYNBtn.Text = "Y-";
             this.JogYNBtn.UseVisualStyleBackColor = false;
+            this.JogYNBtn.Click += new System.EventHandler(this.JogYNBtn_Click);
             // 
             // JogYPBtn
             // 
@@ -359,6 +362,7 @@ namespace Bachelor_GUI
             this.JogYPBtn.TabIndex = 2;
             this.JogYPBtn.Text = "Y+";
             this.JogYPBtn.UseVisualStyleBackColor = false;
+            this.JogYPBtn.Click += new System.EventHandler(this.JogYPBtn_Click);
             // 
             // JogZNBtn
             // 
@@ -369,6 +373,7 @@ namespace Bachelor_GUI
             this.JogZNBtn.TabIndex = 1;
             this.JogZNBtn.Text = "Z-";
             this.JogZNBtn.UseVisualStyleBackColor = false;
+            this.JogZNBtn.Click += new System.EventHandler(this.JogZNBtn_Click);
             // 
             // JogZPBtn
             // 
@@ -379,6 +384,7 @@ namespace Bachelor_GUI
             this.JogZPBtn.TabIndex = 0;
             this.JogZPBtn.Text = "Z+";
             this.JogZPBtn.UseVisualStyleBackColor = false;
+            this.JogZPBtn.Click += new System.EventHandler(this.JogZPBtn_Click);
             // 
             // panel7
             // 
@@ -488,7 +494,7 @@ namespace Bachelor_GUI
             // 
             this.flowLayoutPanel9.Controls.Add(this.ZeroBtn);
             this.flowLayoutPanel9.Controls.Add(this.homeBtn);
-            this.flowLayoutPanel9.Controls.Add(this.button11);
+            this.flowLayoutPanel9.Controls.Add(this.unlockBtn);
             this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 332);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(264, 36);
@@ -503,6 +509,7 @@ namespace Bachelor_GUI
             this.ZeroBtn.TabIndex = 5;
             this.ZeroBtn.Text = "Set Zero";
             this.ZeroBtn.UseVisualStyleBackColor = true;
+            this.ZeroBtn.Click += new System.EventHandler(this.ZeroBtn_Click);
             // 
             // homeBtn
             // 
@@ -514,15 +521,16 @@ namespace Bachelor_GUI
             this.homeBtn.Text = "Home";
             this.homeBtn.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // unlockBtn
             // 
-            this.button11.Location = new System.Drawing.Point(181, 8);
-            this.button11.Margin = new System.Windows.Forms.Padding(5, 8, 5, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(78, 23);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Connect";
-            this.button11.UseVisualStyleBackColor = true;
+            this.unlockBtn.Location = new System.Drawing.Point(181, 8);
+            this.unlockBtn.Margin = new System.Windows.Forms.Padding(5, 8, 5, 5);
+            this.unlockBtn.Name = "unlockBtn";
+            this.unlockBtn.Size = new System.Drawing.Size(78, 23);
+            this.unlockBtn.TabIndex = 7;
+            this.unlockBtn.Text = "Unlock Alarm";
+            this.unlockBtn.UseVisualStyleBackColor = true;
+            this.unlockBtn.Click += new System.EventHandler(this.unlockBtn_Click);
             // 
             // flowLayoutPanel4
             // 
@@ -999,7 +1007,7 @@ namespace Bachelor_GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1385, 798);
+            this.ClientSize = new System.Drawing.Size(1372, 798);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
@@ -1123,7 +1131,7 @@ namespace Bachelor_GUI
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Button ZeroBtn;
         private System.Windows.Forms.Button homeBtn;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button unlockBtn;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox xPosTextBox;

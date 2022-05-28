@@ -23,6 +23,7 @@ namespace Bachelor_GUI
     {
         private delegate void oppdaterSerialMonitor(string mld);
         private delegate void SetTextDeleg(string text);
+        private delegate void streamGC();
 
         // Port:
         private SerialPort comPort;
@@ -31,6 +32,7 @@ namespace Bachelor_GUI
         // Flow control
         private bool paused;
         private bool stopped;
+        private char[] acceptedLetters = new char[]{'G','M'};
 
         public MachineControl()
         {
@@ -42,6 +44,9 @@ namespace Bachelor_GUI
         {
             updateComPort();
             updateBaud();
+            xStepSizetxtbx.Text = "1";
+            yStepSizetxtbox.Text = "1";
+            zStepSizetxtbx.Text = "1";
         }
 
         // Kobling til valgt seriell port:
@@ -230,30 +235,89 @@ namespace Bachelor_GUI
                 startBtn.Enabled = false;
                 pauseBtn.Enabled = true;
                 stopBtn.Enabled = true;
-
-                foreach (string item in GCListBox.Items)
-                {
-                    if (!stopped)
-                    {
-                        if (!paused)
-                        {
-                            sendCommand(item);
-                            while ((string)SerialMonitorLB.Items[SerialMonitorLB.Items.Count - 1] != "ok")
-                            {
-                                // Wait for "ok" to be returned
-                            }
-                        }
-                    }
-                }
+                Thread streamGC = new Thread(streamGcode);
+                streamGC.Start();
             }
             else
             {
                 // Do nothing
             }
+
         }
-        void streamGcode()
+        public void streamGcode()
         {
-            // implementer en fin liten tråd her
+            bool waitingForOk;
+
+            foreach (string item in GCListBox.Items)
+            {
+                waitingForOk = true;
+
+                if (!stopped)
+                {
+                    if (!paused)
+                    {
+
+
+                        if (item.StartsWith("G") || item.StartsWith("M"))
+                        {
+                            sendCommand(item);
+                            Thread.Sleep(100);
+                            while (waitingForOk)
+                            {
+                                if (SerialMonitorLB.Items[SerialMonitorLB.Items.Count - 1].ToString().Contains("ok"))
+                                {
+                                    waitingForOk = false;
+                                }
+                                Thread.Sleep(1000);
+                            }
+                        }
+                        else
+                        {
+                            skrivTilMonitor($"Skipped line: {item}");
+                        }
+                    }
+                    else 
+                    {
+                        while(paused)
+                        { 
+                            // wait for unpause
+                        }
+                    }
+                }
+            }
+            startBtn.Enabled = true;
+            pauseBtn.Enabled = false;
+            stopBtn.Enabled = false;
+        }
+
+        // Jogging:
+
+        private void JogXNBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91X-{xStepSizetxtbx.Text}F10000");
+        }
+        private void JogXPBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91X{xStepSizetxtbx.Text}F10000");
+        }
+        private void JogYPBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91Y{yStepSizetxtbox.Text}F10000");
+        }
+
+        private void JogYNBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91Y-{yStepSizetxtbox.Text}F10000");
+        }
+
+        private void JogZPBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91Z{zStepSizetxtbx.Text}F10000");
+        }
+
+        private void JogZNBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand($"$J=G21G91Z-{zStepSizetxtbx.Text}F10000");
         }
 
         // Ubrukt og uheldig
@@ -286,6 +350,16 @@ namespace Bachelor_GUI
 
             paused = false;
             
+        }
+
+        private void ZeroBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand("G10 P0 L20 X0 Y0 Z0");
+        }
+
+        private void unlockBtn_Click(object sender, EventArgs e)
+        {
+            sendCommand("$X");
         }
     }
 }

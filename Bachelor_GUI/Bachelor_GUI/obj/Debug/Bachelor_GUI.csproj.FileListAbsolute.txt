@@ -8,3 +8,13 @@ F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor
 F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.CoreCompileInputs.cache
 F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.exe
 F:\Progging\C#\BachelorFres_Control\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.pdb
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.exe.config
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.exe
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\bin\Debug\Bachelor_GUI.pdb
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.AssemblyReference.cache
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.MachineControl.resources
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.Properties.Resources.resources
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.GenerateResource.cache
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.csproj.CoreCompileInputs.cache
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.exe
+C:\Users\bendi\OneDrive\Documents\GitHub\Bachelor-Fres\Bachelor_GUI\Bachelor_GUI\obj\Debug\Bachelor_GUI.pdb
